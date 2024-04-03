@@ -1,3 +1,29 @@
+diff --git a/node_modules/react-native/Libraries/Components/Touchable/TVTouchable.js b/node_modules/react-native/Libraries/Components/Touchable/TVTouchable.js
+index 76d2f0b..df9c776 100644
+--- a/node_modules/react-native/Libraries/Components/Touchable/TVTouchable.js
++++ b/node_modules/react-native/Libraries/Components/Touchable/TVTouchable.js
+@@ -51,7 +51,7 @@ export default class TVTouchable {
+             config.onPress(tvData);
+           }
+         } else if (tvData.eventType === 'longSelect') {
+-          if (Platform.OS !== 'android' && !config.getDisabled()) {
++          if (!config.getDisabled()) {
+             config.onLongPress(tvData);
+           }
+         }
+diff --git a/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js b/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js
+index bd0d17c..8c96d6c 100644
+--- a/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js
++++ b/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js
+@@ -334,7 +334,7 @@ class TouchableOpacity extends React.Component<Props, State> {
+           }
+         },
+         onLongPress: event => {
+-          if (this.props.onLongPress != null && Platform.OS !== 'android') {
++          if (this.props.onLongPress != null) {
+             this.props.onLongPress(event);
+           }
+         },
 diff --git a/node_modules/react-native/React/Base/RCTTVRemoteHandler.m b/node_modules/react-native/React/Base/RCTTVRemoteHandler.m
 index d25f1ca..e1864b1 100644
 --- a/node_modules/react-native/React/Base/RCTTVRemoteHandler.m
