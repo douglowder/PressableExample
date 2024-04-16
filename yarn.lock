@@ -1904,10 +1904,10 @@
   dependencies:
     getenv "^1.0.0"
 
-"@react-native-tvos/virtualized-lists@0.73.6-1":
-  version "0.73.6-1"
-  resolved "https://registry.yarnpkg.com/@react-native-tvos/virtualized-lists/-/virtualized-lists-0.73.6-1.tgz#895576d640abd4ce3f19b389e2012e770bf40a4d"
-  integrity sha512-QHgv+ig6y2zcymNKNgHbXUFta+hxnKJYgVlWlqY+Yh0N1xKEe63zn/2Oivrz2BESrLr7nfAiCzrO6RUtTFCJXw==
+"@react-native-tvos/virtualized-lists@0.73.6-2":
+  version "0.73.6-2"
+  resolved "https://registry.yarnpkg.com/@react-native-tvos/virtualized-lists/-/virtualized-lists-0.73.6-2.tgz#fd6e3246a104e875614bc534b851835c0bbf2f1e"
+  integrity sha512-sS7/Y1RwgGil8zPyK5CjIqmDZAnk9zH6Pb0RqQ/ogl8UpWDDG+dDka8eCQoJSRABLxYu+TQyqBw5Ezoq5BRIFw==
   dependencies:
     invariant "^2.2.4"
     nullthrows "^1.1.1"
@@ -5373,16 +5373,16 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-"react-native@npm:react-native-tvos@^0.73.6-1":
-  version "0.73.6-1"
-  resolved "https://registry.yarnpkg.com/react-native-tvos/-/react-native-tvos-0.73.6-1.tgz#0594ebfe0ad5db366243fc6b33d8427b9813dff0"
-  integrity sha512-FI7j4OObG+R8SJO+wZ1/cn9sozqyavPjJz/N0nonOfcjKf4JgtmGpnDFEksXAWGsmzIDFLbErcXHbKeZRYSaEg==
+"react-native@npm:react-native-tvos@^0.73.6-2":
+  version "0.73.6-2"
+  resolved "https://registry.yarnpkg.com/react-native-tvos/-/react-native-tvos-0.73.6-2.tgz#5393b62461c62828c130c9db41cfdb7fc2139caf"
+  integrity sha512-Y4COiNI+JV/HjFWAfa+rQT+7WRTj8ZTrxb+htxOOQVpbZEgLfqVkUQuWIig0EoSKAaecNL76u+8MiycZNZZWCg==
   dependencies:
     "@jest/create-cache-key-function" "^29.6.3"
     "@react-native-community/cli" "12.3.6"
     "@react-native-community/cli-platform-android" "12.3.6"
     "@react-native-community/cli-platform-ios" "12.3.6"
-    "@react-native-tvos/virtualized-lists" "0.73.6-1"
+    "@react-native-tvos/virtualized-lists" "0.73.6-2"
     "@react-native/assets-registry" "0.73.1"
     "@react-native/codegen" "0.73.3"
     "@react-native/community-cli-plugin" "0.73.17"
