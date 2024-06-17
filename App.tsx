@@ -44,6 +44,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <PressableButton title="Pressable" log={updatePressableLog} />
+      <PressableButton
+        title="Pressable"
+        log={updatePressableLog}
+        functional={false}
+      />
       <TouchableOpacityButton
         title="TouchableOpacity"
         log={updatePressableLog}
@@ -70,8 +75,13 @@ export default function App() {
 const PressableButton = (props: {
   title: string;
   log: (entry: string) => void;
+  functional?: boolean;
 }) => {
-  return (
+  // If "functional" is false, RNTV 0.74.2-0 has a bug where
+  // the Pressable's onPress() method never gets fired
+  const [userFocused, setUserFocused] = useState(false);
+  const functional = props?.functional ?? true;
+  return functional ? (
     <Pressable
       onFocus={() => props.log(`${props.title} focus`)}
       onBlur={() => props.log(`${props.title} blur`)}
@@ -96,6 +106,30 @@ const PressableButton = (props: {
           </Text>
         );
       }}
+    </Pressable>
+  ) : (
+    <Pressable
+      onFocus={() => {
+        props.log(`${props.title} focus`);
+        setUserFocused(true);
+      }}
+      onBlur={() => {
+        props.log(`${props.title} blur`);
+        setUserFocused(false);
+      }}
+      onPress={() => props.log(`${props.title} pressed`)}
+      onLongPress={(
+        event: GestureResponderEvent & { eventKeyAction?: number },
+      ) =>
+        props.log(
+          `${props.title} long press ${
+            event.eventKeyAction === 0 ? 'start' : 'end'
+          }`,
+        )
+      }
+      style={userFocused ? styles.pressableFocused : styles.pressable}
+    >
+      <Text style={styles.pressableText}>{`${props.title} nonfunctional`}</Text>
     </Pressable>
   );
 };
